@@ -46,6 +46,7 @@ def save_diary():
     profilename=f'static/profile-{mytime}.{extension}'
     profile.save(profilename)
 
+#ini juga untuk week5
     time = today.strftime('%Y.%m.%d')
 
     doc ={
@@ -53,7 +54,8 @@ def save_diary():
         'profile': profilename,
         'title' : title_receive,
         'content' :content_receive,
-        'time': today.strftime('%Y.%m.%d'),
+        #untuk minggu 5
+        'time': time,
     }
 
     db.diary.insert_one(doc)
